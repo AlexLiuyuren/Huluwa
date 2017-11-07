@@ -5,14 +5,12 @@ import creature.Grass;
 import location.Location;
 
 public class Formation {
-    private Location location;
     protected int height;
     protected int width;
 
     protected Creature[][] contents;
 
-    public  Formation(Location l, int height, int width){
-        this.location = l;
+    public  Formation(int height, int width){
         this.height = height;
         this.width = width;
 
@@ -36,37 +34,6 @@ public class Formation {
             sb.append("\n");
         }
         return  sb.toString();
-    }
-
-    public boolean conflict(Formation x){
-        int mleft = this.location.getX();
-        int xleft = x.location.getX();
-        Formation a, b;
-        if (mleft < xleft){
-            a = this;
-            b = x;
-        }else {
-            a = x;
-            b = this;
-        }
-        if (a.location.getX() + a.width < b.location.getX()){
-            return true;
-        }
-        if (a.location.getY() > b.location.getY() + b.height){
-            return true;
-        }
-        if (a.location.getY() + a.height < b.location.getY()){
-            return true;
-        }
-        return false;
-    }
-
-    public Location getLocation() {
-        return location;
-    }
-
-    public void setLocation(Location location) {
-        this.location = location;
     }
 
     public int getWidth() {
