@@ -2,7 +2,7 @@
 # 面向对象的设计
 作业目录结构如下图：
 
-<img width="150"  src="catalog.png"/>
+<img width="150"  src="img/catalog.png"/>
 ## creature
 Creature:
 父类, 其他类均继承自Creature.(之所以用继承不用接口，是因为这些类均含有父类Creature的成员变量name, location.)
@@ -36,3 +36,12 @@ Ground:
 ## location
 Location:
 位置类, 记录了每个Creature的位置信息.
+
+# 运行结果
+结果一：
+
+<img width="400"  src="img/result1.png"/>
+
+结果二:
+
+<img width="400"  src="img/result2.png"/>
